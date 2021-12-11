@@ -1,0 +1,30 @@
+<div class="container">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Posicion</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Aparicion</th>
+        <th scope="col">Casa</th>
+        <th scope="col">Imagen</th>
+        <th scope="col" >Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let heroT of heroTable; let i = index">
+        <th scope="row">{{ heroT.idx + 1 }}</th>
+        <td>{{ heroT.nombre }}</td>
+        <td>
+          <button (click)="abrirModal(heroT)" class="btn btn-secondary">Ver Info del heroe</button>
+        </td>
+        <td>{{ heroT.aparicion }}</td>
+        <td>{{ heroT.casa }}</td>
+        <td><img src="{{ heroT.img }}" alt="{{ heroT.nombre }}" width="50px"></td>
+        <td class="text-center icon">
+          <img (click)="delete(heroT.idx)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAZklEQVRIie3UwQnAIAyF4X+kjuAo3TQjOIKjvJ56VGIUS8XAO4jBD3MIbF2CS5AFqsQEaQSwxuNvyggggaL36wHHOFz5Doh+PTyqZUDv+QAH2BGY3b8EKLVF1kjuAVInYoLbDfyqHjx2UkxuvWs9AAAAAElFTkSuQmCC"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

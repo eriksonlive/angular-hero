@@ -1,0 +1,10 @@
+<div class="card">
+  <img class="card-img-top img-fluid" [src]="heroImput.img">
+  <div class="card-body">
+    <h5 class="card-title">{{ heroImput.nombre }}</h5>
+    <p class="card-text">{{ heroImput.descripcion }}</p>
+    <p class="card-text"><small class="text-muted">{{heroImput.aparicion}}</small></p>
+    <button (click)="getHeroes()" type="button" class="btn btn-outline-primary btn-block"> Ver más... </button>
+    <button class="btn btn-outline-primary btn-block" (click)="verDato($event, heroImput)"> Ver datos del personaje</button>
+  </div>
+</div>
